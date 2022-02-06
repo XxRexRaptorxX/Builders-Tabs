@@ -38,5 +38,8 @@ public class MainTab extends CreativeModeTab {
         ItemList.add(new ItemStack(Blocks.DRAGON_EGG));
         ItemList.add(new ItemStack(Items.DEBUG_STICK));
         ItemList.add(new ItemStack(Items.KNOWLEDGE_BOOK));
+        ItemList.add(new ItemStack(Items.BUNDLE));
+        ItemList.add(new ItemStack(Items.LIGHT));
+        ItemList.add(new ItemStack(Blocks.SCULK_SENSOR));
     }
 }

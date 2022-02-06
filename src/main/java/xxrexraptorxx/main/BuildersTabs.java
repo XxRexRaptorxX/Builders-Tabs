@@ -5,6 +5,10 @@ import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * @author XxRexRaptorxX (RexRaptor)
+ * @projectPage https://www.curseforge.com/minecraft/mc-mods/builders-tabs
+ **/
 @Mod("builderstabs")
 public class BuildersTabs {
 

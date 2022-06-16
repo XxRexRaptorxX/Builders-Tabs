@@ -1,33 +1,33 @@
-modLoader="javafml" #mandatory
-loaderVersion="[38,)" #mandatory (26 is current forge version)
+modLoader="javafml"
+loaderVersion="[41,)"
 license="All rights reserved"
-issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs/issues" #optional
+issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs/issues"
 
 
-[[mods]] #mandatory
-modId="builderstabs" #mandatory
-version="1.2.3" #mandatory
-displayName="Builder's Tabs" #mandatory
+[[mods]]
+modId="builderstabs"
+version="1.2.3"
+displayName="Builder's Tabs"
 itemIcon="minecraft:command_block"
-#updateJSONURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs" #optional
-displayURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs" #optional
-logoFile="logo.png" #optional
-credits="" #optional
-authors="XxRexRaptorxX (RexRaptor)" #optional
+#updateJSONURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs"
+logoFile="logo.png"
+credits=""
+authors="XxRexRaptorxX (RexRaptor)"
 description='''
 Adds vanilla special blocks & items without a creative tab and custom player heads into its own tab. Useful for mapmakers and builders.
 '''
 
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.builderstabs]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[38,)" #mandatory
+
+[[dependencies.builderstabs]]
+    modId="forge"
+    mandatory=true
+    versionRange="[41,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.builderstabs]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,1.19)"
+    versionRange="[1.19,1.20)"
     ordering="NONE"
     side="BOTH"

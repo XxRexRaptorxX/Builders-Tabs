@@ -2,6 +2,7 @@ package xxrexraptorxx.builderstabs.main;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -31,7 +32,7 @@ public class BuildersTabs {
     @SubscribeEvent
     public static void registerTabs(final CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(CREATIVE_TAB, (cf) -> cf.icon(() -> createNBTItemStack(Minecraft.getInstance().player.getName().getString()))
-                .displayItems((flagSet, output, ifSth) -> {
+                .title(Component.translatable("itemGroup." + BuildersTabs.MODID + ".tab")).displayItems((flagSet, output, ifSth) -> {
 
                     output.accept(createNBTItemStack("XxRexRaptorxX"));
                     output.accept(createNBTItemStack(Minecraft.getInstance().player.getName().getString()));

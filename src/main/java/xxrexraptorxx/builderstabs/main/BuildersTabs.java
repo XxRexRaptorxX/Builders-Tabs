@@ -32,7 +32,7 @@ public class BuildersTabs {
     @SubscribeEvent
     public static void registerTabs(final CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(CREATIVE_TAB, (cf) -> cf.icon(() -> createNBTItemStack(Minecraft.getInstance().player.getName().getString()))
-                .title(Component.translatable("itemGroup." + BuildersTabs.MODID + ".tab")).displayItems((flagSet, output, ifSth) -> {
+                .title(Component.translatable("itemGroup." + BuildersTabs.MODID + ".tab")).displayItems((p_270258_, output) -> {
 
                     output.accept(createNBTItemStack("XxRexRaptorxX"));
                     output.accept(createNBTItemStack(Minecraft.getInstance().player.getName().getString()));

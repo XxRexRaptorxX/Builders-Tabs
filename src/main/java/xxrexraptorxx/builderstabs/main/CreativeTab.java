@@ -4,20 +4,21 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class CreativeModeTab {
+public class CreativeTab {
 
-    public static final DeferredRegister<net.minecraft.world.item.CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BuildersTabs.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BuildersTabs.MODID) ;
 
     public static void init() { CREATIVE_MODE_TABS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 
 
-    public static final RegistryObject<net.minecraft.world.item.CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register(BuildersTabs.MODID, () -> net.minecraft.world.item.CreativeModeTab.builder()
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register(BuildersTabs.MODID, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + BuildersTabs.MODID + "_tab"))
             .icon(() -> createNBTItemStack(Minecraft.getInstance().player.getName().getString()))
             .displayItems((params, output) -> {

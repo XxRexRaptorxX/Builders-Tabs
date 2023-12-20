@@ -1,6 +1,6 @@
 package xxrexraptorxx.builderstabs.main;
 
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +16,6 @@ public class BuildersTabs {
 
 
     public BuildersTabs() {
-        CreativeModeTab.init();
+        CreativeTab.init();
     }
 }

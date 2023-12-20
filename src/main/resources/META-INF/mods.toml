@@ -17,7 +17,7 @@ description='''Adds a special creative tab with custom player heads into its own
 
 
 [[dependencies.${mod_id}]]
-modId="forge"
+modId="neoforge"
 mandatory=true
 versionRange="${forge_version_range}"
 ordering="NONE"

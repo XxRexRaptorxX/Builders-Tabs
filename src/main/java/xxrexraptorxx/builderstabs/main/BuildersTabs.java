@@ -1,5 +1,6 @@
 package xxrexraptorxx.builderstabs.main;
 
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +16,7 @@ public class BuildersTabs {
     public static final Logger LOGGER = LogManager.getLogger();
 
 
-    public BuildersTabs() {
-        CreativeTab.init();
+    public BuildersTabs(IEventBus bus) {
+        CreativeTab.init(bus);
     }
 }

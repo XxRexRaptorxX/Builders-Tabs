@@ -1,11 +1,7 @@
 package xxrexraptorxx.builderstabs.main;
 
-import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.PropertyMap;
-import com.mojang.brigadier.StringReader;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.client.Minecraft;
-import net.minecraft.commands.arguments.item.ItemParser;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -19,7 +15,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Optional;
 import java.util.UUID;
-import java.util.logging.Level;
 
 public class CreativeTab {
 

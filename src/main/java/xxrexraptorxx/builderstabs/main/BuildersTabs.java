@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
- * @projectPage https://www.curseforge.com/minecraft/mc-mods/builders-tabs
+ * @projectPage <a href="https://www.curseforge.com/minecraft/mc-mods/builders-tabs">...</a>
  **/
 @Mod("builderstabs")
 public class BuildersTabs {

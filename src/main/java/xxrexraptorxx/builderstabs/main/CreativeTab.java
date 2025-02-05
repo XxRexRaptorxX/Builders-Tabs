@@ -1,10 +1,16 @@
 package xxrexraptorxx.builderstabs.main;
 
+import com.mojang.authlib.GameProfile;
+import com.mojang.authlib.minecraft.MinecraftSessionService;
 import com.mojang.authlib.properties.PropertyMap;
+import com.mojang.authlib.yggdrasil.ProfileResult;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.players.GameProfileCache;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -76,11 +82,9 @@ public class CreativeTab {
     //TODO FIX!
     private static ItemStack createNBTItemStack(String name) {
         ItemStack stack = new ItemStack(Items.PLAYER_HEAD);
-        stack.set(DataComponents.PROFILE, new ResolvableProfile(Optional.ofNullable(name), Optional.empty(), new PropertyMap()));
-
+        stack.set(DataComponents.PROFILE, new ResolvableProfile(Optional.of(name), Optional.empty(), new PropertyMap()));
         return stack;
     }
-
 
     UUID XxRexRaptorxX_UUID = UUID.fromString("f83183e3-53c8-4f32-bfe5-5364f9d55d72");
     UUID MHF_Steve_UUID = UUID.fromString("8667ba71-b85a-4004-af54-457a9734eed7");

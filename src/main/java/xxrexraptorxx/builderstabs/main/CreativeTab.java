@@ -1,6 +1,5 @@
 package xxrexraptorxx.builderstabs.main;
 
-import com.mojang.authlib.properties.PropertyMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +12,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.Optional;
 import java.util.UUID;
 
 public class CreativeTab {
@@ -27,57 +25,57 @@ public class CreativeTab {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register(BuildersTabs.MODID,
             () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + BuildersTabs.MODID + "_tab"))
-                    .icon(() -> createNBTItemStack(Minecraft.getInstance().player.getName().getString())).displayItems((params, output) -> {
-                        output.accept(createNBTItemStack("XxRexRaptorxX"));
-                        output.accept(createNBTItemStack(Minecraft.getInstance().player.getName().getString()));
-                        output.accept(createNBTItemStack("MHF_Steve"));
-                        output.accept(createNBTItemStack("MHF_Alex"));
-                        output.accept(createNBTItemStack("MHF_Blaze"));
-                        output.accept(createNBTItemStack("MHF_CaveSpider"));
-                        output.accept(createNBTItemStack("MHF_Chicken"));
-                        output.accept(createNBTItemStack("MHF_Cow"));
-                        output.accept(createNBTItemStack("MHF_Creeper"));
-                        output.accept(createNBTItemStack("MHF_Enderman"));
-                        output.accept(createNBTItemStack("MHF_Ghast"));
-                        output.accept(createNBTItemStack("MHF_Golem"));
-                        output.accept(createNBTItemStack("MHF_Herobrine"));
-                        output.accept(createNBTItemStack("MHF_LavaSlime"));
-                        output.accept(createNBTItemStack("MHF_MushroomCow"));
-                        output.accept(createNBTItemStack("MHF_Ocelot"));
-                        output.accept(createNBTItemStack("MHF_Pig"));
-                        output.accept(createNBTItemStack("MHF_PigZombie"));
-                        output.accept(createNBTItemStack("MHF_Sheep"));
-                        output.accept(createNBTItemStack("MHF_Skeleton"));
-                        output.accept(createNBTItemStack("MHF_Slime"));
-                        output.accept(createNBTItemStack("MHF_Spider"));
-                        output.accept(createNBTItemStack("MHF_Squid"));
-                        output.accept(createNBTItemStack("MHF_Villager"));
-                        output.accept(createNBTItemStack("MHF_WSkeleton"));
-                        output.accept(createNBTItemStack("MHF_Zombie"));
-                        output.accept(createNBTItemStack("MHF_Cactus"));
-                        output.accept(createNBTItemStack("MHF_Cake"));
-                        output.accept(createNBTItemStack("MHF_Chest"));
-                        output.accept(createNBTItemStack("MHF_CoconutB"));
-                        output.accept(createNBTItemStack("MHF_CoconutG"));
-                        output.accept(createNBTItemStack("MHF_Melon"));
-                        output.accept(createNBTItemStack("MHF_OakLog"));
-                        output.accept(createNBTItemStack("MHF_Present1"));
-                        output.accept(createNBTItemStack("MHF_Present2"));
-                        output.accept(createNBTItemStack("MHF_Pumpkin"));
-                        output.accept(createNBTItemStack("MHF_TNT"));
-                        output.accept(createNBTItemStack("MHF_TNT2"));
-                        output.accept(createNBTItemStack("MHF_ArrowUp"));
-                        output.accept(createNBTItemStack("MHF_ArrowDown"));
-                        output.accept(createNBTItemStack("MHF_ArrowLeft"));
-                        output.accept(createNBTItemStack("MHF_ArrowRight"));
-                        output.accept(createNBTItemStack("MHF_Exclamation"));
-                        output.accept(createNBTItemStack("MHF_Question"));
+                    .icon(() -> createCustomHeadStack(Minecraft.getInstance().player.getName().getString())).displayItems((params, output) -> {
+                        output.accept(createCustomHeadStack("XxRexRaptorxX"));
+                        output.accept(createCustomHeadStack(Minecraft.getInstance().player.getName().getString()));
+                        output.accept(createCustomHeadStack("MHF_Steve"));
+                        output.accept(createCustomHeadStack("MHF_Alex"));
+                        output.accept(createCustomHeadStack("MHF_Blaze"));
+                        output.accept(createCustomHeadStack("MHF_CaveSpider"));
+                        output.accept(createCustomHeadStack("MHF_Chicken"));
+                        output.accept(createCustomHeadStack("MHF_Cow"));
+                        output.accept(createCustomHeadStack("MHF_Creeper"));
+                        output.accept(createCustomHeadStack("MHF_Enderman"));
+                        output.accept(createCustomHeadStack("MHF_Ghast"));
+                        output.accept(createCustomHeadStack("MHF_Golem"));
+                        output.accept(createCustomHeadStack("MHF_Herobrine"));
+                        output.accept(createCustomHeadStack("MHF_LavaSlime"));
+                        output.accept(createCustomHeadStack("MHF_MushroomCow"));
+                        output.accept(createCustomHeadStack("MHF_Ocelot"));
+                        output.accept(createCustomHeadStack("MHF_Pig"));
+                        output.accept(createCustomHeadStack("MHF_PigZombie"));
+                        output.accept(createCustomHeadStack("MHF_Sheep"));
+                        output.accept(createCustomHeadStack("MHF_Skeleton"));
+                        output.accept(createCustomHeadStack("MHF_Slime"));
+                        output.accept(createCustomHeadStack("MHF_Spider"));
+                        output.accept(createCustomHeadStack("MHF_Squid"));
+                        output.accept(createCustomHeadStack("MHF_Villager"));
+                        output.accept(createCustomHeadStack("MHF_WSkeleton"));
+                        output.accept(createCustomHeadStack("MHF_Zombie"));
+                        output.accept(createCustomHeadStack("MHF_Cactus"));
+                        output.accept(createCustomHeadStack("MHF_Cake"));
+                        output.accept(createCustomHeadStack("MHF_Chest"));
+                        output.accept(createCustomHeadStack("MHF_CoconutB"));
+                        output.accept(createCustomHeadStack("MHF_CoconutG"));
+                        output.accept(createCustomHeadStack("MHF_Melon"));
+                        output.accept(createCustomHeadStack("MHF_OakLog"));
+                        output.accept(createCustomHeadStack("MHF_Present1"));
+                        output.accept(createCustomHeadStack("MHF_Present2"));
+                        output.accept(createCustomHeadStack("MHF_Pumpkin"));
+                        output.accept(createCustomHeadStack("MHF_TNT"));
+                        output.accept(createCustomHeadStack("MHF_TNT2"));
+                        output.accept(createCustomHeadStack("MHF_ArrowUp"));
+                        output.accept(createCustomHeadStack("MHF_ArrowDown"));
+                        output.accept(createCustomHeadStack("MHF_ArrowLeft"));
+                        output.accept(createCustomHeadStack("MHF_ArrowRight"));
+                        output.accept(createCustomHeadStack("MHF_Exclamation"));
+                        output.accept(createCustomHeadStack("MHF_Question"));
                     }).build());
 
     // TODO FIX!
-    private static ItemStack createNBTItemStack(String name) {
+    private static ItemStack createCustomHeadStack(String name) {
         ItemStack stack = new ItemStack(Items.PLAYER_HEAD);
-        stack.set(DataComponents.PROFILE, new ResolvableProfile(Optional.of(name), Optional.empty(), new PropertyMap()));
+        stack.set(DataComponents.PROFILE, ResolvableProfile.createUnresolved(name));
         return stack;
     }
 

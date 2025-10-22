@@ -8,13 +8,15 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 itemIcon="minecraft:player_head"
-#updateJSONURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs"
+updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Builders-Tabs/refs/heads/main/versions.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/builders-tabs"
 logoFile="logo.png"
 #credits=""
 authors="${mod_authors}"
 description='''Adds a special creative tab with custom player heads into its own tab. Useful for mapmakers and builders.'''
 
+[modproperties.${mod_id}]
+configuredBackground="minecraft:textures/block/vault_bottom_ominous.png"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
